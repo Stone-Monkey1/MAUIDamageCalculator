@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIDamageCalculator.MainPage">
+
+    <ScrollView>
+        <Grid Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  />
+                <ColumnDefinition  />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            <Label Text="Flaming" Grid.Row="0" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="End" Grid.Column="0"/>
+            <CheckBox Grid.Row="0" x:Name="Flaming" VerticalOptions="Center" HorizontalOptions="Start" Margin="20,0,0,0" Grid.Column="1" CheckedChanged="Flaming_CheckedChanged" SemanticProperties.Description="Checks whether the weapon is flaming"/>
+            <Label Text="Magic" Grid.Row="0" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="End" Grid.Column="2"/>
+            <CheckBox SemanticProperties.Description="Checks whether the sword is magic" Grid.Row="0" x:Name="Magic" VerticalOptions="Center" HorizontalOptions="Start" Margin="20,0,0,0" Grid.Column="3" CheckedChanged="Magic_CheckedChanged"/>
+            <Button SemanticProperties.Description="Throws a 3d6 for damage" Text="Roll for Damage" Grid.Row="1" Grid.ColumnSpan="4" BackgroundColor="Purple" TextColor="White" BorderWidth="2" BorderColor="Black" Clicked="Button_Clicked"/>
+            <Label SemanticProperties.Description="The results of the damage roll" x:Name="Damage" Text="" Grid.Row="2" Grid.ColumnSpan="4" Margin="0,20,0,0" BackgroundColor="Black" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Large"/>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
